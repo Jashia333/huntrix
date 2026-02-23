@@ -1,0 +1,13 @@
+# App
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+
+# OpenTelemetry
+opentelemetry-api==1.28.2
+opentelemetry-sdk==1.28.2
+opentelemetry-instrumentation-fastapi==0.49b2
+opentelemetry-exporter-prometheus==0.49b2
+opentelemetry-exporter-otlp==1.28.2
+
+# Prometheus client (for custom metrics alongside OTel)
+prometheus-client==0.21.0

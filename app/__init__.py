@@ -1,0 +1,1 @@
+# Huntrix observability practice app
