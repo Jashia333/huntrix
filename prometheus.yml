@@ -1,0 +1,16 @@
+# Prometheus config for Huntrix observability practice
+# Scrapes the app's OpenTelemetry Prometheus exporter (metrics on port 9464).
+
+scrape_configs:
+  - job_name: "huntrix"
+    static_configs:
+      # When app runs on host: use host.docker.internal (Docker Desktop)
+      # When app runs in Docker: use app:9464
+      - targets: ["host.docker.internal:9464"]
+    scrape_interval: 5s
+    scrape_timeout: 3s
+
+  # Optional: scrape Prometheus itself
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
